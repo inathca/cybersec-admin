@@ -1,37 +1,38 @@
-### 📌 1️⃣ CREATE User
-POST http://localhost:3000/user
+GET http://localhost:3000/user HTTP/1.1
 Content-Type: application/json
 
 {
+
+}
+
+###
+//Create user 
+POST http://localhost:3000/user HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "demodd44332",
+    "password":"demo3",
+    "cardID":"123456"
+}
+
+####
+//Update user 
+PUT http://localhost:3000/user HTTP/1.1
+Content-Type: application/json
+
+{   
+    "id": 2,
     "username": "demo3",
-    "password": "demo3"
+    "password":"demo3",
+    "cardID":"123456"
 }
 
-### 📌 2️⃣ READ All Users
-GET http://localhost:3000/users
-
-### 📌 3️⃣ READ User by ID (ใช้ body)
-GET http://localhost:3000/user
+####
+//Delete User 
+DELETE  http://localhost:3000/user HTTP/1.1
 Content-Type: application/json
 
-{
-    "id": 1
-}
-
-### 📌 4️⃣ UPDATE User
-PUT http://localhost:3000/user
-Content-Type: application/json
-
-{
-    "id": 1,
-    "username": "updatedUser",
-    "password": "newpassword123"
-}
-
-### 📌 5️⃣ DELETE User
-DELETE http://localhost:3000/user
-Content-Type: application/json
-
-{
+{   
     "id": 1
 }
